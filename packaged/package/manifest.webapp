@@ -1,0 +1,14 @@
+{
+	"version" : "5.0",
+	"name" : "Crono Pack",
+	"description" : "Crono Pack",
+	"launch_path" : "/crono.html",
+	"icons" : 	{
+					"16" : "/ico_16.png",
+					"48" : "/ico_48.png",
+					"128" : "/ico_128.png"
+				},
+	"developer" : 	{
+						"name" : "Carlos Arriaga"
+					}
+}

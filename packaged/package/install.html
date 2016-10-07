@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+	<head>
+		<meta charset="utf-8">
+		<title>Instalador de Cronómetro</title> 
+		<script type="text/javascript" src="/app/zepto.min.js" ></script>
+	</head>
+
+	<body>
+		<div id="install">Estado de la instalación de aplicación</div>
+		<script>
+			$(document).ready(function(){
+				var gManifestName = location.href.replace("install.htm","") + 'manifest.webapp';
+				var request = navigator.mozApps.checkInstalled(gManifestName);
+				
+				request.onsuccess = function(){
+					if(request.result) {
+						$("#install").text("La App ya está instalada");
+					}
+					else{
+						$("#install").html("<input type='button' value='Instalar'>");
+						$("#install").click(function(){
+							var req = navigator.mozApps.install(gManifestName);
+							req.onsuccess = function(data){
+								$("#install").text("La App ha sido instalada").unbind('click');
+							}
+							req.onerror = function(errObj){
+								alert("Error en la instalación: \n codigo de error" + this.error.name)
+							}
+						});
+					}
+				}
+				request.onerror = function(){  alert("Error en la instalación: \n codigo de error" + this.error.message) }
+			});
+		</script>
+		
+	</body>
+
+</html>

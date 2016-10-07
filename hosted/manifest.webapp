@@ -1,0 +1,14 @@
+{
+	"version" : "5.0",
+	"name" : "Crono Hosted",
+	"description" : "Crono Hosted",
+	"launch_path" : "/Tareas/M9/apps/hosted/crono.html",
+	"icons" : 	{
+					"16" : "/Tareas/M9/apps/hosted/ico_16.png",
+					"48" : "/Tareas/M9/apps/hosted/ico_48.png",
+					"128" : "/Tareas/M9/apps/hosted/ico_128.png"
+				},
+	"developer" : 	{
+						"name" : "Carlos Arriaga"						
+					}
+}
